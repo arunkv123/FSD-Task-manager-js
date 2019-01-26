@@ -7,7 +7,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { ViewTaskComponent } from './view-task/view-task.component';
-// import { IonRangeSliderModule } from 'ng2-ion-range-slider';
+import { IonRangeSliderModule } from 'ng2-ion-range-slider';
 import { NgxMyDatePickerModule } from 'ngx-mydatepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -31,7 +31,7 @@ import { TaskService } from './utilities/common-service';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    // IonRangeSliderModule,
+    IonRangeSliderModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule, DataTableModule, GrowlModule, ConfirmDialogModule, SliderModule, CalendarModule
