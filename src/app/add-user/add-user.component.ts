@@ -35,7 +35,7 @@ export class AddUserComponent implements OnInit {
   onReset() {
     this.saveButtonString = 'Add';
 
-    this.currentUser = { userId: 0, employeeId: '', firstName: "", lastName: "" };
+    this.currentUser = { userId: 0, employeeId: '', firstName: '', lastName: '' };
     this.form.reset();
   }
 
@@ -56,7 +56,7 @@ export class AddUserComponent implements OnInit {
     this.service.updateUsers(user)
       .subscribe(data => {
 
-        this.showMessage(data.status.Result, data.status.Message);
+        this.showMessage(data.status.result, data.status.message);
 
       });
 
@@ -85,7 +85,7 @@ export class AddUserComponent implements OnInit {
       accept: () => {
         this.service.deleteUser(user)
           .subscribe(data => {
-            this.showMessage(data.Result, data.Message);
+            this.showMessage(data.result, data.message);
           });
       }
     });

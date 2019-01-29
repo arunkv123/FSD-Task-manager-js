@@ -8,7 +8,7 @@ import { Options } from 'selenium-webdriver/chrome';
 
 @Injectable()
 export class AddUserService {
-    apiEndPOint: String = 'http://localhost:8090';
+    apiEndPOint: String = 'http://localhost:9000/FSD-Project-manager-0.0.1-SNAPSHOT';
     constructor(private http: HttpClient) { }
 
     getUsers(): Observable<Users[]> {

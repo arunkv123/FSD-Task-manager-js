@@ -17,7 +17,7 @@ export class AddProjectComponent implements OnInit {
   projectsList: Project[];
   usersList: Users[];
   startDate: Date;
-  public addOrUpdateBtn: string = 'Add';
+  public addOrUpdateBtn = 'Add';
 
 
   private addProjectForm: FormGroup;
@@ -39,7 +39,7 @@ export class AddProjectComponent implements OnInit {
       checkDatesControl: [null],
       startDateControl: [this.datePipe.transform(Date.now(), 'yyyy-MM-dd').toString()],
       endDateControl: [this.datePipe.transform(Date.now() + 86400000, 'yyyy-MM-dd').toString()],
-      status: ["Active"],
+      status: ['Active'],
       priorityControl: [null, Validators.required],
       selectedManagerControl: [null, Validators.required],
       selectedManagerName: [null, Validators.required],
@@ -79,10 +79,9 @@ export class AddProjectComponent implements OnInit {
   showMessage(status: boolean, message: string) {
     this.msgs = [];
     if (status === true) {
-      this.msgs.push({ severity: 'success', summary: "Success", detail: message });
-    }
-    else {
-      this.msgs.push({ severity: 'error', summary: "Error", detail: message });
+      this.msgs.push({ severity: 'success', summary: 'Success', detail: message });
+    } else {
+      this.msgs.push({ severity: 'error', summary: 'Error', detail: message });
 
     }
     this.addProjectReset();
@@ -108,7 +107,7 @@ export class AddProjectComponent implements OnInit {
       projectName: this.addProjectForm.get('projectNameControl').value,
       status: this.addProjectForm.get('status').value
     })
-      .subscribe(data => { this.showMessage(data.status.Result, data.status.Message); });
+      .subscribe(data => { this.showMessage(data.status.result, data.status.message); });
 
   }
 
@@ -127,16 +126,10 @@ export class AddProjectComponent implements OnInit {
     this.confirmationService.confirm({
       message: 'Are you sure that you want to suspend project : ' + project.projectName + '?',
       accept: () => {
-        project.status = "Suspended";
+        project.status = 'Suspended';
         this.service.updateProject(project)
-          .subscribe(data => { this.showMessage(data.status.Result, data.status.Message); });
+          .subscribe(data => { this.showMessage(data.status.result, data.status.message); });
       }
     });
   }
-
-
-
-
-
-
 }

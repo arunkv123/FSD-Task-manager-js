@@ -198,7 +198,7 @@ export class AddTaskComponent implements OnInit {
       taskName: this.addTaskForm.get('taskNameControl').value,
       userId: this.addTaskForm.get('UserIdControl').value
     })
-      .subscribe(data => { this.showMessage(data.status.Result, data.status.Message); this.clearDate(); });
+      .subscribe(data => { this.showMessage(data.status.result, data.status.message); this.clearDate(); });
 
   }
 

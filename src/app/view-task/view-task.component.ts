@@ -57,7 +57,7 @@ export class ViewTaskComponent implements OnInit {
       accept: () => {
         task.status = false;
         this.service.updateTask(task)
-          .subscribe(data => { this.showMessage(data.status.Result, data.status.Message); });
+          .subscribe(data => { this.showMessage(data.status.result, data.status.message); });
       }
     });
   }
