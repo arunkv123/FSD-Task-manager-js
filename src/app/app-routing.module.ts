@@ -7,12 +7,12 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { ViewTaskComponent } from './view-task/view-task.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/adduser', pathMatch: 'full' },
-  { path: 'adduser', component: AddUserComponent },
-  { path: 'addproject', component: AddProjectComponent },
-  { path: 'addtask', component: AddTaskComponent },
-  { path: 'viewtask', component: ViewTaskComponent },
-  { path: 'edittask', component: AddTaskComponent }
+  { path: 'FSD-Project-manager-0.0.1-SNAPSHOT', redirectTo: 'FSD-Project-manager-0.0.1-SNAPSHOT/adduser', pathMatch: 'full' },
+  { path: 'FSD-Project-manager-0.0.1-SNAPSHOT/adduser', component: AddUserComponent },
+  { path: 'FSD-Project-manager-0.0.1-SNAPSHOT/addproject', component: AddProjectComponent },
+  { path: 'FSD-Project-manager-0.0.1-SNAPSHOT/addtask', component: AddTaskComponent },
+  { path: 'FSD-Project-manager-0.0.1-SNAPSHOT/viewtask', component: ViewTaskComponent },
+  { path: 'FSD-Project-manager-0.0.1-SNAPSHOT/edittask', component: AddTaskComponent }
 ];
 
 @NgModule({

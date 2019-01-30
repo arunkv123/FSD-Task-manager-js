@@ -9,9 +9,9 @@
                 <form [formGroup]="addProjectForm" (ngSubmit)="addProjectSubmit()" novalidate>
                     <div class="row">
                         <div class="col-md-3"></div>
-                        <div class="form-group col-md-6">
-                            <label class="control-label col-sm-4" for="firstName">Project:</label>
-                            <div class="col-sm-8">
+                        <div class="form-group col-md-12">
+                            <label class="control-label col-sm-10" for="firstName">Project:</label>
+                            <div class="col-sm-10">
                                 <input class="form-control" id="projectName" placeholder="Enter project name" name="projectNameControl" formControlName="projectNameControl">
                             </div>
                         </div>
@@ -24,7 +24,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-5"></div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="checkbox checkbox-padding">
                                 <label>
                                     <input type="checkbox" value="" name="checkDatesControl" formControlName="checkDatesControl">Set Start and End Date
@@ -35,9 +35,9 @@
                     </div>
                     <div class="row" *ngIf="addProjectForm.controls.checkDatesControl.value">
                         <div class="col-md-3">{{startDate}}</div>
-                        <div class="form-group col-md-6">
-                            <label class="control-label col-sm-4" for="startDate">Start Date:</label>
-                            <div class="col-md-8">
+                        <div class="form-group col-md-12">
+                            <label class="control-label col-sm-10" for="startDate">Start Date:</label>
+                            <div class="col-md-10">
                                 <div class="input-group">
                                         <p-calendar  name="startDateControl"   formControlName="startDateControl" [showIcon]="true" dateFormat="yy-mm-dd"></p-calendar>
                                     
@@ -47,9 +47,9 @@
                     </div>
                     <div class="row" *ngIf="addProjectForm.controls.checkDatesControl.value">
                         <div class="col-md-3"></div>
-                        <div class="form-group col-md-6">
-                            <label class="control-label col-sm-4" for="endDate">End Date:</label>
-                            <div class="col-md-8">                  
+                        <div class="form-group col-md-12">
+                            <label class="control-label col-sm-10" for="endDate">End Date:</label>
+                            <div class="col-md-10">                  
                                 <div class="input-group">
                                         <p-calendar  name="endDateControl"  formControlName="endDateControl"   [showIcon]="true" dateFormat="yy-mm-dd"></p-calendar>
 
@@ -63,9 +63,9 @@
                     </div>
                     <div class="row">
                         <div class="col-md-3"></div>
-                        <div class="form-group col-md-6">
-                            <label class="control-label col-sm-4">priority:</label>
-                            <div class="col-sm-8">
+                        <div class="form-group col-md-12">
+                            <label class="control-label col-sm-10">priority:</label>
+                            <div class="col-sm-10">
                                 <div class="row">
                                     <div class="col-sm-1">
                                         <h4 class="middleVert1">0</h4>
@@ -92,12 +92,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-3"></div>
-                        <div class="form-group col-md-6">
-                            <label class="control-label col-sm-4" >Manager:</label>
-                            <div class="col-sm-6">
+                        <div class="form-group col-md-12">
+                            <label class="control-label col-sm-10" >Manager:</label>
+                            <div class="col-sm-10">
                                 <input class="form-control" placeholder="Select the Manager" readonly  name="selectedManager" formControlName="selectedManagerName">
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-10">
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#searchManagersModal">Search</button>
                             </div>
                         </div>
@@ -105,9 +105,9 @@
                     </div>
                     <div class="row">
                         <div class="col-md-3"></div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-12">
                             <div class="col-md-4"></div>
-                            <div class="col-md-8">
+                            <div class="col-md-10">
                                 <button type="submit" class="btn btn-md" [disabled]="addProjectForm.invalid"
                                 [ngClass]="{
                                     'btn-primary': addOrUpdateBtn == 'Add',
