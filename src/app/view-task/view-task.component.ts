@@ -47,7 +47,7 @@ export class ViewTaskComponent implements OnInit {
   }
   editTask(task: TaskModel) {
     this.taskService.task = task;
-    this.router.navigate(['/FSD-Project-manager-0.0.1-SNAPSHOT/edittask']);
+    this.router.navigate(['/edittask']);
 
   }
   endTask(task: TaskModel) {

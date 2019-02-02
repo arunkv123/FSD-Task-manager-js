@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:9000/FSD-Project-manager-0.0.1-SNAPSHOT'
+  apiUrl: 'http://localhost:9000'
 };
 
 /*

@@ -54,7 +54,7 @@ export class AddTaskComponent implements OnInit {
 
 
     // check the route for edit and then subscribe to data service
-    if (this.router.url === '/FSD-Project-manager-0.0.1-SNAPSHOT/edittask') {
+    if (this.router.url === '/edittask') {
       if (this.taskService.task !== null) {
         this.editMode();
         this.onFormEditInit(this.taskService.task);
